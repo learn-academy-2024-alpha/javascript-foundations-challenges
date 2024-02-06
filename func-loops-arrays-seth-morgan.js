@@ -134,25 +134,25 @@ const arr2 = [7, 8, 2, 3, 1, 5, 4]
     // determine if using logic
     // create empty array
     // return one array with no duplicate values
-const twoIntoOne = (arr1, arr2) => {
-    let arr = []
-    for (let i = 0; i < arr1.length; i++) {
-        if (arr.includes(arr1[i])) {
-            continue
-        } else {
-            arr.push(arr1[i])
-        }
-    }
-    for (let i = 0; i < arr2.length; i++) {
-        if (arr.includes(arr2[i])) {
-            continue
-        } else {
-            arr.push(arr2[i])
-        }
-    }
-    return arr
-}
-console.log(twoIntoOne(arr1, arr2));
+// const twoIntoOne = (arr1, arr2) => {
+//     let arr = []
+//     for (let i = 0; i < arr1.length; i++) {
+//         if (arr.includes(arr1[i])) {
+//             continue
+//         } else {
+//             arr.push(arr1[i])
+//         }
+//     }
+//     for (let i = 0; i < arr2.length; i++) {
+//         if (arr.includes(arr2[i])) {
+//             continue
+//         } else {
+//             arr.push(arr2[i])
+//         }
+//     }
+//     return arr
+// }
+// console.log(twoIntoOne(arr1, arr2));
 
 // Create a function that takes in two numbers as arguments and returns an array the length of the first number filled with the second number.
 const arrayLength = 6
@@ -165,14 +165,14 @@ const arrayValue2 = 11
 // output: array
 // logic: will need an empty arr, for loop, push method
 
-const firstWithSecond = (num1, num2) => {
-    let newArr = []
-    for (let i = 0; i < num1; i++) {
-        newArr.push(num2)
-    }
-    return newArr
-}
-console.log(firstWithSecond(arrayLength2, arrayValue2));
+// const firstWithSecond = (num1, num2) => {
+//     let newArr = []
+//     for (let i = 0; i < num1; i++) {
+//         newArr.push(num2)
+//     }
+//     return newArr
+// }
+// console.log(firstWithSecond(arrayLength2, arrayValue2));
 
 // Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function.
 const addUp1 = 4
@@ -187,11 +187,36 @@ const addUp3 = 600
 // input: a single number
 // output: a single number
 // logic: for loop, empty variale
-const factorial = (num) => {
-    let newNum = 0
-    for (let i = num; i > 0; i--) {
-        newNum += i
-    }
-    return newNum
-}
-console.log(factorial(addUp2))
+// const factorial = (num) => {
+//     let newNum = 0
+//     for (let i = num; i > 0; i--) {
+//         newNum += i
+//     }
+//     return newNum
+// }
+// console.log(factorial(addUp2))
+
+// Epic Goals
+
+// Create a function called highLow that takes in a number and returns whether the number is higher or lower than the "answer".
+// input: a single number
+// output: string, whether the number is higher or lower than the "answer"
+// logic: if statement, variale called answer,
+
+const highLow = (number) => {
+    let userAnswer = prompt("Enter a number between 1 - 100")
+    let userCont = prompt("do you wish to continue")
+    let answer = 50
+    do {
+        if (userAnswer < answer && userAnswer >= 1) {
+            alert("your guess is too low")
+            userCont
+
+        } else if (userAnswer > answer && userAnswer <= 100) {
+            alert("your guess is too high")
+            let userCont = prompt("do you wish to continue")
+        } else {
+            alert("congradulations you guessed right!!!")
+        }
+    } while (userCont === "y")
+} 
