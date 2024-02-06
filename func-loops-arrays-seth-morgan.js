@@ -203,20 +203,34 @@ const addUp3 = 600
 // output: string, whether the number is higher or lower than the "answer"
 // logic: if statement, variale called answer,
 
-const highLow = (number) => {
-    let userAnswer = prompt("Enter a number between 1 - 100")
-    let userCont = prompt("do you wish to continue")
+const highLow = () => {
+    let userCont
     let answer = 50
+    let countBar = 0
     do {
-        if (userAnswer < answer && userAnswer >= 1) {
+        let userAnswer = prompt("Enter a number between 1 - 100")
+        if (countBar == 7) {
+            alert("YOU LOSE")
+            return
+        } else if (userAnswer < answer && userAnswer >= 1) {
+            countBar++
+            console.log(countBar)
             alert("your guess is too low")
-            userCont
-
+            userCont = prompt("do you wish to continue")
         } else if (userAnswer > answer && userAnswer <= 100) {
+            countBar++
             alert("your guess is too high")
-            let userCont = prompt("do you wish to continue")
+            userCont = prompt("do you wish to continue")
+        } else if (userAnswer === answer) {
+            countBar++
+            alert("congratulations you guessed right!!!")
         } else {
-            alert("congradulations you guessed right!!!")
+            alert("you didn't enter a number between 1 and 100")
         }
-    } while (userCont === "y")
+        if (userCont.toLowerCase() === "y" || userCont.toLowerCase() === "yes") {
+            let countBarMath = 7 - countBar
+            alert(`you have used ${countBar} guess(es) and have ${countBarMath} remaining`)
+        }
+    } while (userCont.toLowerCase() === "y" || userCont.toLowerCase() === "yes")
 } 
+console.log(highLow())
