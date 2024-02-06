@@ -137,6 +137,61 @@ const arr2 = [7, 8, 2, 3, 1, 5, 4]
 const twoIntoOne = (arr1, arr2) => {
     let arr = []
     for (let i = 0; i < arr1.length; i++) {
-        arr.push(arr1)
+        if (arr.includes(arr1[i])) {
+            continue
+        } else {
+            arr.push(arr1[i])
+        }
     }
+    for (let i = 0; i < arr2.length; i++) {
+        if (arr.includes(arr2[i])) {
+            continue
+        } else {
+            arr.push(arr2[i])
+        }
+    }
+    return arr
 }
+console.log(twoIntoOne(arr1, arr2));
+
+// Create a function that takes in two numbers as arguments and returns an array the length of the first number filled with the second number.
+const arrayLength = 6
+const arrayValue = 0
+// output: [0, 0, 0, 0, 0, 0]
+const arrayLength2 = 4
+const arrayValue2 = 11
+// output: [11, 11, 11, 11]
+// iput: 2 numbers
+// output: array
+// logic: will need an empty arr, for loop, push method
+
+const firstWithSecond = (num1, num2) => {
+    let newArr = []
+    for (let i = 0; i < num1; i++) {
+        newArr.push(num2)
+    }
+    return newArr
+}
+console.log(firstWithSecond(arrayLength2, arrayValue2));
+
+// Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function.
+const addUp1 = 4
+// 1 + 2 + 3 + 4 = 10
+// output: 10
+const addUp2 = 10
+// 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55
+// output: 55
+const addUp3 = 600
+// output: 180300
+
+// input: a single number
+// output: a single number
+// logic: for loop, empty variale
+const factorial = (num) => {
+    let newNum = 0
+    for (let i = num; i > 0; i--) {
+        newNum += i
+    }
+    return newNum
+}
+console.log(factorial(addUp2))
