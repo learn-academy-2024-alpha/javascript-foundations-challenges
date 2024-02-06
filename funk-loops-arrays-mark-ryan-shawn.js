@@ -135,19 +135,35 @@
 // Create a function that takes in two numbers as arguments and returns an array the length of the first number filled with the second number.
 // const arrayLength = 6
 // const arrayValue = 0
+// const createArray = (arrayLength, arrayValue) => {
+//     const result = []; // Initialize an empty array to store the result
+    
+//     // Loop to create the array
+//     for (let i = 0; i < arrayLength; i++) {
+//         result.push(arrayValue); // Add the specified value to the array
+//     }
+    
+//     return result; // Return the resulting array
+// };
+// console.log(createArray(4, 11));
+
 // // output: [0, 0, 0, 0, 0, 0]
 
 // const arrayLength = 4
 // const arrayValue = 11
 // // output: [11, 11, 11, 11]
+
 // Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function.
-// const addUp1 = 4
-// // 1 + 2 + 3 + 4 = 10
-// // output: 10
+const addUp1 = 4
+const addUp2 = 10
+const addUp3 = 600
 
-// const addUp2 = 10
-// // 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55
-// // output: 55
+const addNumber = (number) => {
+    let sum = 0;
+    for(let i =1; i<= number; i++){
+        sum += i;
+    }
+    return sum
+}
 
-// const addUp3 = 600
-// // output: 180300
+console.log(addNumber(addUp1), addNumber(addUp2), addNumber(addUp3))
