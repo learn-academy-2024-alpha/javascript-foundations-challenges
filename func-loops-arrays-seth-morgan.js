@@ -205,12 +205,14 @@ const addUp3 = 600
 
 const highLow = () => {
     let userCont
-    let answer = 50
+    let answer = Math.floor(Math.random() * 100) + 1;
     let countBar = 0
     do {
         let userAnswer = prompt("Enter a number between 1 - 100")
-        if (countBar == 7) {
-            alert("YOU LOSE")
+        if (countBar == 2) {
+            let elmoImg = document.querySelector(`.elmo`)
+            elmoImg.classList.remove(`elmo`)
+            alert(`YOU LOSE THE CORRECT ANSWER WAS ${answer}`)
             return
         } else if (userAnswer < answer && userAnswer >= 1) {
             countBar++
@@ -221,9 +223,10 @@ const highLow = () => {
             countBar++
             alert("your guess is too high")
             userCont = prompt("do you wish to continue")
-        } else if (userAnswer === answer) {
+        } else if (userAnswer == answer) {
             countBar++
             alert("congratulations you guessed right!!!")
+            return
         } else {
             alert("you didn't enter a number between 1 and 100")
         }
