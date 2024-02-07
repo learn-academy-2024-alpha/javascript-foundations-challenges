@@ -45,8 +45,8 @@ console.log(oddNum(arr2));
 // // output: [7, 3, 5, 13, -9]
 
 // Create a function that takes in a string of multiple words and returns an array with only the words that have an odd number of characters.
-// const pumbaa =
-//   "Hakuna Matata what a wonderful phrase Hakuna Matata ain't no passing craze"
+const pumbaa =
+  "Hakuna Matata what a wonderful phrase Hakuna Matata ain't no passing craze"
 // // output: ["a", "wonderful", "ain't", "passing", "craze"]
 // Create a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: Use the typeof operator.
 // const comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
