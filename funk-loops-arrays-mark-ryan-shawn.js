@@ -10,7 +10,7 @@
 //     for (let i = 0; i < arrayOfNums.length; i++) {
 //         result.push(arrayOfNums[i] * 3);
 //     }
-//     return result
+//    alert result
 // };
 
 // console.log(multiplyBy3(testArr1))
@@ -27,7 +27,7 @@
 //         newArr.push(array[i])
 //       }
 //     }
-//     return newArr
+//    alert newArr
 //   }
   
 //   console.log(onlyEven(testArr2))
@@ -62,7 +62,7 @@
 //             newString += array[i]
 //         }
 //     }
-//     return newString
+//    alert newString
 // }
 // console.log(extractLetters(comboArr))
 // output: "nicework"
@@ -76,7 +76,7 @@
 // create a func
 // iterate with a for loop
 // create an empty arr = 0
-// return new array 
+//alert new array 
 
 //     const addThese1 = [1, 2, 3, 4]
 //     const addThese2 = []
@@ -85,7 +85,7 @@
 //         for (let i=0; i<array.length; i++){
 //         newArr += array[i]
 //     }
-//     return newArr
+//    alert newArr
 // }
 // console.log(addArr(addThese1))
 // console.log(addArr(addThese2))
@@ -106,7 +106,7 @@
 //         newArr.push(i);
 //         }
 //     }
-//     return newArr
+//    alert newArr
 // }
 //     console.log(largeNum(indexHighestNumber)[0]);
 
@@ -127,7 +127,7 @@
 //         let newArr = []
 //         let dupArr = arr1.concat(arr2)
 //         let noDups = [...new Set(dupArr)]
-//         return noDups.sort()
+//        alert noDups.sort()
 //     }
 //     let numSort = arraysDups(arr1, arr2)
 //     console.log(numSort)
@@ -143,7 +143,7 @@
 //         result.push(arrayValue); // Add the specified value to the array
 //     }
     
-//     return result; // Return the resulting array
+//    alert result; // Return the resulting array
 // };
 // console.log(createArray(4, 11));
 
@@ -154,16 +154,44 @@
 // // output: [11, 11, 11, 11]
 
 // Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function.
-const addUp1 = 4
-const addUp2 = 10
-const addUp3 = 600
+// const addUp1 = 4
+// const addUp2 = 10
+// const addUp3 = 600
 
-const addNumber = (number) => {
-    let sum = 0;
-    for(let i =1; i<= number; i++){
-        sum += i;
+// const addNumber = (number) => {
+//     let sum = 0;
+//     for(let i =1; i<= number; i++){
+//         sum += i;
+//     }
+//    alert sum
+// }
+
+// console.log(addNumber(addUp1), addNumber(addUp2), addNumber(addUp3))
+
+// 🏔 Epic Goals
+// Create a function called highLow that takes in a number and returns whether the number is higher or lower than the "answer".
+// Create an HTML page and link your JavaScript file. More info here.
+// As a user, I see a prompt or input where I can guess a number between 1 and 100 (both inclusive).
+// As a user, I can see if my guess is too high or too low.
+// As a user, if I guess the "answer" correctly I am notified that I won.
+// As a user, I can continue to guess the "answer" until I am correct.
+// STRETCH: As a user, if I have not guessed the correct number in seven tries I see a losing message.
+
+let numInput 
+
+
+const answer = Math.floor(Math.random() * 100);
+
+const highLow = () => {
+    const numInput = document.getElementById('numBox').value;
+    if (numInput === "") {
+        alert("PLEASE ENTER A NUMBER BETWEEN 1 - 100");
+    } else if (numInput == answer) {
+        alert(`You guessed the correct answer ${numInput}! You won!`);
+    } else if (numInput < answer) {
+        alert(`${numInput} is too low, try again`);
+    } else if (numInput > answer) {
+        alert(`${numInput} is too high, try again`);
     }
-    return sum
-}
-
-console.log(addNumber(addUp1), addNumber(addUp2), addNumber(addUp3))
+};
+// console.log(highLow(answer))
