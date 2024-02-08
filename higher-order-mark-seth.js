@@ -120,17 +120,17 @@ const arr2 = [7, 8, 2, 1, 5, 4]
 
 
 //--------------------or--------------
-const oneArray = (arr1, arr2) => {
-    let combinedArray = arr1.concat(arr2)
-    let uniqueArray = []
-    for(let i = 0; i < combinedArray.length; i++) {
-        if (!uniqueArray.includes(combinedArray[i])) {
-            uniqueArray.push(combinedArray[i])
-        }
-    }
-    return uniqueArray
-}  
-console.log(oneArray(arr1, arr2));  
+// const oneArray = (arr1, arr2) => {
+//     let combinedArray = arr1.concat(arr2)
+//     let uniqueArray = []
+//     for(let i = 0; i < combinedArray.length; i++) {
+//         if (!uniqueArray.includes(combinedArray[i])) {
+//             uniqueArray.push(combinedArray[i])
+//         }
+//     }
+//     return uniqueArray
+// }  
+// console.log(oneArray(arr1, arr2));  
 
 //-----------------------or----------------
 // const oneArray = (arr1, arr2) => {
