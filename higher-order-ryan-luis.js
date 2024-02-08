@@ -76,12 +76,12 @@
 // // output: ["sImBa", "nAlA", "zAzU", "rAfIkI"]
 
 // Create a function that takes in a string and returns a new string with all the vowels removed.
- const str = "javascript is awesome"
- const removeVowels = (array) =>{
-    return array.filter((value)=>{
-        return value.includes()
-    })
- }
+//  const str = "javascript is awesome"
+//  const removeVowels = (array) =>{
+//     return array.filter((value)=>{
+//         return value.includes()
+//     })
+//  }
   
         
 
@@ -94,6 +94,21 @@
 // const arr1 = [3, 7, 10, 5, 4, 3]
 // const arr2 = [7, 8, 2, 1, 5, 4]
 // // output: [3, 7, 10, 5, 4, 8, 2, 1]
+
+
 // Create a function that takes in an array of mixed data types and returns the first value that is a string. HINT: look into the JavaScript .find() method.
-// const allTheData = [7, null, true, 2, "yo!", false, 4, "hello!"]
+const allTheData = [7, null, true, 2, "yo!", false, 4, "hello!"]
 // // output: "yo!"
+
+//input: array of mixed data types
+//output: "yo!" first string
+//create a function that filters the 1st string out of the array 
+// return the 1st string 
+const newData = (array) => {
+   return array.find((value) => typeof value === "string")
+   // let finalString = value.find()
+   //  return finalString
+   // return newString
+}
+
+console.log(newData(allTheData))
