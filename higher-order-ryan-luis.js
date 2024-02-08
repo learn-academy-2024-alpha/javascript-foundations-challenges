@@ -50,12 +50,41 @@
 
 // Create a function that takes in an array and returns an array without any false, null, 0, or blank values.
 // const filterArrayValues = [58, "", "abcd", true, null, false, 0]
-// // output: [58, "abcd", true]
+// const noBadStuff = (anyArray) =>{
+//     let truthyArr = anyArray.filter(value => Boolean(value) != false)
+//     //console.log(truthyArr);
+//     return truthyArr
+// }
+//     console.log(noBadStuff(filterArrayValues))
+
+// output: [58, "abcd", true]
 // Create a function that takes in an array of strings and returns an array of strings with every other letter capitalized.
 // const makesWackyWords = ["simba", "nala", "zazu", "rafiki"]
+// const wackyWords = (array) =>{
+//     return array.map((value) =>{
+//        return value.split("").map((letter, index) =>{
+//         if(index % 2 === 0){
+//             return letter.toLowerCase()
+//         } else{
+//             return letter.toUpperCase()
+//         }
+   //        return index % 2 === 0 ? letter.toLowerCase(): letter.toUpperCase()
+//         }).join("")
+//     })
+//     }
+// console.log(wackyWords(makesWackyWords));
 // // output: ["sImBa", "nAlA", "zAzU", "rAfIkI"]
+
 // Create a function that takes in a string and returns a new string with all the vowels removed.
-// const str = "javascript is awesome"
+ const str = "javascript is awesome"
+ const removeVowels = (array) =>{
+    return array.filter((value)=>{
+        return value.includes()
+    })
+ }
+  
+        
+
 // // output: "jvscrpt s wsm"
 // Create a function that takes in a string containing numbers and returns an array with each number at its own index and converted to the data type of number.
 // const stringOfNumbers = "4574328"
