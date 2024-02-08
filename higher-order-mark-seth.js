@@ -78,10 +78,10 @@ const comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
 const str = "javascript is awesome"
 const removeVowels = (str) => {
     let vowels = str.split("")
-    let notWanted = "aeiou"
-    console.log(vowels)
-    console.log(notWanted)
-    return vowels.filter((value)=> value.includes(notWanted.split("")))
+    // let notWanted = "aeiou"
+    // console.log(vowels)
+    // console.log(notWanted)
+    return vowels.filter((value)=> value.includes("a",'e','i','o','u') !== true ? value : value)
     
     
 }
