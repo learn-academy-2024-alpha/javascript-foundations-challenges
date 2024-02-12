@@ -80,14 +80,77 @@ const smallestNumber = (num1, num2) => {
 }
 // Write the test for a function that takes in one numbers and returns whether the number is odd.
 // Create the function that will make the test pass.
+describe("isItOdd", () => {
+    it("the fxn takes a num and returns whether num is odd", () => {
+        expect(isItOdd(10)).toEqual("not odd")
+        expect(isItOdd(13)).toEqual("odd")
+    })
+})
+
+const isItOdd = (num) => {
+    if (num % 2 !== 0) {
+        return "odd"
+    } else {
+        return "not odd"
+    }
+}
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
 // Create the function that will make the test pass.
+describe("appleOrBanana", () => {
+    it("the fxn takes in a string and returns yellow if banana, red if apple, purple if grape", () => {
+        expect(appleOrBanana("banana")).toEqual("yellow")
+        expect(appleOrBanana("apple")).toEqual("red")
+        expect(appleOrBanana("grape")).toEqual("purple")
+    })
+})
+
+const appleOrBanana = (fruit) => {
+    if (fruit === "banana") {
+        return "yellow"
+    } else if (fruit === "apple") {
+        return "red"
+    } else if (fruit === "grape") {
+        return "purple"
+    }
+}
 // Write the test for a function called rick that returns "Morty".
 // Create the function that will make the test pass.
+describe("rick", () => {
+    it("the fxn returns string Morty", () => {
+        expect(rick()).toEqual("Morty")
+    })
+})
+
+const rick = () => {
+    return "Morty"
+}
 // Write the test for a function called greeter that takes a name as an argument and returns a greeting with that name to the screen.
 // Create the function that will make the test pass.
+describe("greeter", () => {
+    it("the fxn will return the name passed with a greeting", () => {
+        expect(greeter("Mark")).toEqual("Hello, Mark!")
+    })
+})
+
+const greeter = (name) => {
+    return `Hello, ${name}!`
+}
 // Write the test for a function called oddOrEven that takes a number as an argument and logs whether the number is odd or even.
 // Create the function that will make the test pass.
+describe("oddOrEven", () => {
+    it("the fxn will take a num and return whether odd or even", () => {
+        expect(oddOrEven(12)).toEqual("even")
+        expect(oddOrEven(13)).toEqual("odd")
+    })
+})
+
+const oddOrEven = (num) => {
+    if (num % 2 === 0) {
+        return "even"
+    } else {
+        return "odd"
+    }
+}
 // Write the test for a function called doubler that takes a number and returns the result of the number multiplied by 2.
 // Create the function that will make the test pass.
 // Write the test for a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
