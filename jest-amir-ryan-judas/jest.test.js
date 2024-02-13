@@ -198,8 +198,59 @@ const doubler = (multCount) => {
 
 // Write the test for a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
 
+describe("multiplyNums", () => {
+  it("takes two numbers as arguments and returns those numbers multiplied", () => {
+    let firstNum = 100
+    let secondNum = 200
+    let finalResult = firstNum * secondNum 
+    expect(multiplyNums(firstNum, secondNum)).toEqual(finalResult)
+  })
+})
 // Create the function that will make the test pass.
+
+const multiplyNums = (num1, num2) => {
+  return num1 * num2
+}
 // Write the test for a function called divisibleBy that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
+
+describe("divisbleBy", () => {
+  it("takes two numbers and returns whether the first number is evenly divisible by the second", () => {
+    let divideNum1 = 100
+    let divideNum2 = 20
+    expect(divisbleBy(divideNum1, divideNum2)).toEqual("these numbers are divisible by each other")
+  })
+})
 // Create the function that will make the test pass.
+
+const divisbleBy = (nums1, nums2) => {
+  if (nums1 / nums2){
+    return "these numbers are divisible by each other"
+  } else {
+    return "these are not divisible"
+  }
+}
 // Write the test for a function called fizzbuzz. If a number is a multiple of 3, replace it with the word "fizz". If a number is a multiple of five, replace it with the word "buzz". If a number is a multiple of both 3 and 5, replace it with "fizzbuzz".
+
+describe("fizzBuzz", () => {
+  it("takes a number mulitple 3 returns fizz, takes a number multiple of 5 returns buzz, takes a number multiple of both 3 and 5 returns fizzbuzz", () => {
+    let mulNum1 = 6
+    let mulNum2 = 20
+    let mulNum3 = 15
+    expect(fizzBuzz(mulNum1)).toEqual("fizz")
+    expect(fizzBuzz(mulNum2)).toEqual("buzz")
+    expect(fizzBuzz(mulNum3)).toEqual("fizzbuzz")
+  })
+})
 //  Create the function that will make the test pass.
+
+const fizzBuzz = (number) => {
+  if (number % 3 === 0 && number % 5 === 0) {
+    return "fizzbuzz"
+  } else if (number % 3 === 0) {
+    return "fizz"
+  } else if (number % 5 === 0) {
+    return "buzz"
+  } else {
+    return "no valid entry"
+  }
+}
