@@ -1,4 +1,4 @@
-// Consider this variable:
+ // Consider this variable:
 
 // const person = {
 //   firstName: "Arthur",
@@ -36,30 +36,50 @@
 // }
 // console.log(product.getData())
 // Write a function called totalWithTax that takes the product object as an argument and returns the total price of the chair that includes a 7% sales tax rounded to two decimals.
-const product = {
-    name: "chair",
-    price: 24.99,
-    tax: .07,
-    totalWithTax: function () {
-      return `The product is a ${this.name}. it costs ${this.price}.` 
-    }
-  }
-console.log(product.totalWithTax)
+// const product = {
+//     name: "chair",
+//     price: 24.99,
+//     tax: .07,
+//    }
+  
+//    const totalWithTax = (object) => {
+//     return (object.price * object.tax + object.price).toFixed(2)
+//    }
 
-
+//    console.log(totalWithTax(product));
 
 
 // Consider this variable:
+// Write the code that accesses the ingredients property.
 
 // const lunch = {
 //   name: "PB and Banana",
 //   type: "sandwich",
-//   ingredients: ["bread", "peanut butter", "banana"]
+//   ingredients: ["bread", "peanut butter", "banana"],
+//   getData: function () {
+//     return `${this.ingredients}`
+//   }
 // }
-// Write the code that accesses the ingredients property.
+
+// console.log(lunch.getData());
+
 // Write the code that access the third ingredient of the lunch object.
-// Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+// console.log(lunch.ingredients[2]);
+
 // Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+// const lunch = {
+//   name: "PB and Banana",
+//   type: "sandwich",
+//   ingredients: ["bread", "peanut butter", "banana"],
+//   getData: function () {
+//     return `the ingredients for a ${this.name} ${this.type} are ${this.ingredients}`
+//   }
+// }
+
+// console.log(lunch.getData());
+
+// Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana.
+
 // Consider this variable:
 
 // const animals = [
