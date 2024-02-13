@@ -155,10 +155,49 @@ const greeter = (string) => {
 }
 
 // Write the test for a function called oddOrEven that takes a number as an argument and logs whether the number is odd or even.
+
+describe("oddOrEven", () => {
+it("returns a number as odd or even", () => {
+  let oddNum = 3
+  let evenNum = 4
+  expect(oddOrEven(oddNum)).toEqual("that's odd")
+  expect(oddOrEven(evenNum)).toEqual("now we're even")
+})
+})
+
 // Create the function that will make the test pass.
+
+const oddOrEven = (num) => {
+  if(num % 2 !== 0){
+  return "that's odd"
+  }else if(num % 2 === 0){
+    return "now we're even"
+  }else{
+    return "sum ain't right"
+  }
+    }
+  
+
 // Write the test for a function called doubler that takes a number and returns the result of the number multiplied by 2.
+
+describe("doubler", () =>{
+  it("takes a number and return it times 2.", () => {
+    let multNum = 5
+    let multResult = multNum * 2 
+    expect(doubler(multResult)).toEqual("it takes a team")
+  })
+}) 
+
 // Create the function that will make the test pass.
+
+const doubler = (multCount) => {
+  if (multCount === 10){
+    return "it takes a team"
+  }
+}
+
 // Write the test for a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
+
 // Create the function that will make the test pass.
 // Write the test for a function called divisibleBy that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
 // Create the function that will make the test pass.
