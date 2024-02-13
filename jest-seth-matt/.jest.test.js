@@ -10,6 +10,8 @@ describe("coffee", () => {
     it ("should return a statement depending on input", () => {
         expect(coffee("yes")).toEqual("drink coffee")
         expect(coffee("no")).toEqual("keep working")
+        expect(coffee("maybe")).toEqual("error, there is no maybe")
+        
     })
 })
 const coffee = (answer) => {
@@ -18,7 +20,7 @@ const coffee = (answer) => {
 } else if (answer === "no") {
     return "keep working"
     } else {
-        return "error"
+        return "error, there is no maybe"
     } 
 }
 
@@ -27,6 +29,7 @@ describe("relaxed", () => {
     it ("should return a statement depending on input", () => {
         expect(relaxed("yes")).toEqual("relax")
         expect(relaxed("no")).toEqual("keep going")
+        expect(relaxed("maybe")).toEqual("this is too easy to be stressful, so there is no maybe")
     })
 })
 const relaxed = (answer) => {
@@ -35,18 +38,22 @@ const relaxed = (answer) => {
     } else if (answer === "no") {
         return "keep going"
     } else {
-        return "error"
+        return "this is too easy to be stressful, so there is no maybe"
     }
 }
 
 // 3. Write the test for a function that returns "in budget" if a price is lower than $300.
 describe("areYouInBudget", () => {
     it ("should return a statement depending on input", () => {
-        expect(areYouInBudget(true)).toEqual("in budget")
+        expect(areYouInBudget(0)).toEqual("in budget")
+        expect(areYouInBudget(250)).toEqual("in budget")
+        expect(areYouInBudget(299.99)).toEqual("in budget")
+        expect(areYouInBudget(300.01)).toEqual("not in budget")
+
     })
 })
 const areYouInBudget = (number) => {
-    if(number <= 300) {
+    if(number >= 0 && number < 300) {
         return "in budget"
     } else { 
         return "not in budget"
@@ -56,10 +63,10 @@ const areYouInBudget = (number) => {
 // 4. Write the test for a function that takes in two numbers and returns the smaller number.
 describe("numbers", () => {
     it ("returns smaller number", () => {
-        const num1 = 2
-        const num2 = 5
-
-        expect(numbers(num1, num2)).toEqual(`${num1} is smaller`) 
+        expect(numbers(5, 1_000_000.01)).toEqual(`5 is smaller`)
+        expect(numbers(1000000.001, 1_000_000.01)).toEqual(`1000000.001 is smaller`) 
+        expect(numbers(.0000000015, 1_000_000.01)).toEqual("1.5e-9 is smaller") 
+        expect(numbers("Banana")).toEqual("thats not a number you animal") 
     })
 })
 
@@ -69,19 +76,21 @@ const numbers = (num1, num2) => {
     } else if (num1 > num2) {
         return `${num2} is smaller`
     } else {
-        return "not a number"
+        return "thats not a number you animal"
     }
 }
 
 // 5. Write the test for a function that takes in one numbers and returns whether the number is odd.
 describe("isOdd", () => {
-    it ("returns wheather the number is odd", () => {
-        let number = 5
-        expect(isOdd(number)).toEqual(`${number} is odd`)
+    it ("returns whether the number is odd", () => {
+        expect(isOdd(5)).toEqual(`5 is odd`) 
+        expect(isOdd(-2)).toEqual(`-2 is not odd`)
+        expect(isOdd(6)).toEqual(`6 is not odd`) 
+        expect(isOdd(2.2)).toEqual(`2.2 is not odd`) // decimal does not work, how to add 2.2, but changing it to "is odd" works
     })
 })
 const isOdd = (number) => {
-    return number % 2 !== 0 ? `${number} is odd` : `${number} is even`    
+    return number % 2 !== 0 ? `${number} is odd` : `${number} is not odd`    
 }
 
 // 6. Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
@@ -92,6 +101,8 @@ describe("fruitColor", () => {
         expect(fruitColor("apple")).toEqual("red")
         expect(fruitColor("banana")).toEqual("yellow")
         expect(fruitColor("grape")).toEqual("purple")
+        expect(fruitColor("maybe")).toEqual("THATS NOT AN APPROVED FRUIT")
+
     })
 })
 
@@ -102,7 +113,9 @@ const fruitColor = (fruit) => {
         return "yellow"
     } else if (fruit === "grape"){
         return "purple"
-    } 
+    } else {
+        return "THATS NOT AN APPROVED FRUIT"
+    }
 }
 // 7. Write the test for a function called rick that returns "Morty".
 describe("rickctionMortifier", () => {
@@ -127,7 +140,7 @@ describe("greeter", () => {
         expect(greeter("Luis")).toEqual("Greetings human named Luis" )
         expect(greeter("Amir")).toEqual("Greetings human named Amir" )
         expect(greeter("Judas")).toEqual("Greetings human named Judas" )
-        expect(greeter("trish")).toEqual("Greetings human named Trish" )
+        expect(greeter("Trish")).toEqual("Greetings human named Trish" )
 
 
 
@@ -136,7 +149,7 @@ describe("greeter", () => {
 })
 
 const greeter = (name1) => {
-    return name1 === "Seth" ? `Greetings human named ${name1}` : "iAmARobot"
+    return name1 === name1  ? `Greetings human named ${name1}` : "iAmARobot"
 }
 // 9. Write the test for a function called oddOrEven that takes a number as an argument and logs whether the number is odd or even.
 describe("oddOrEven", () => {
