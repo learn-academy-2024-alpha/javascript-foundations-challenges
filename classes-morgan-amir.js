@@ -136,10 +136,10 @@ class Cylinder {
     this.radius = radius
   }
   volume( ){
-    let pi = 3.14
+    let pi = Math.PI
     let rSquared = this.radius ** 2
     let height = this.height
-    return (pi * rSquared * height)
+    return (pi * rSquared * height).toFixed(4)
   }    
   }
 
