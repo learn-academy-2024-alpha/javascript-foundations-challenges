@@ -140,34 +140,66 @@ console.log(triangleDimensions)
 
 // Consider this variable:
 
-// const learn = {
-//   cohorts: {
-//     2022: [
-//       "Alpha",
-//       "Bravo",
-//       "Charlie",
-//       "Delta",
-//       "Echo",
-//       "Foxtrot",
-//       "Golf",
-//       "Hotel"
-//     ],
-//     2023: [
-//       "Alpha",
-//       "Bravo",
-//       "Charlie",
-//       "Delta",
-//       "Echo",
-//       "Foxtrot",
-//       "Golf",
-//       "Hotel",
-//       "India",
-//       "Juliet"
-//     ]
-//   }
-// }
+const learn = {
+  cohorts: {
+    2022: [
+      "Alpha",
+      "Bravo",
+      "Charlie",
+      "Delta",
+      "Echo",
+      "Foxtrot",
+      "Golf",
+      "Hotel"
+    ],
+    2023: [
+      "Alpha",
+      "Bravo",
+      "Charlie",
+      "Delta",
+      "Echo",
+      "Foxtrot",
+      "Golf",
+      "Hotel",
+      "India",
+      "Juliet"
+    ],
+    2024: [
+        "Alpha",
+        "Bravo",
+        "Charlie",
+        "Delta",
+        "Echo",
+        "Foxtrot",
+        "Golf",
+        "Hotel",
+        "India",
+        "Juliet"
+      ]
+  }
+}
 // Write the code that logs the name of your cohort.
-
+// const cohortName = (cohortsObj) => {
+//     alpha2022 = cohortsObj.cohorts;
+//     return alpha2022;
+// }
+// console.log(learn.cohorts[2024][0])
 // Write the code that uses destructuring to log the name of your cohort.
+// const { 2024: year } = learn.cohorts
+// console.log(year[0])
+const { cohorts: { 2024: [alphaCohort] } } = learn;
+// console.log(alphaCohort)
 // Create a function that takes an object like the one above and returns an array with a string of every cohort name and year.
-// // output: ["2022 Alpha", "2022 Bravo", "2022 Charlie", "2022 Delta", "2022 Echo", "2022 
+const cohortStr = (cohortObj) => {
+    const arrStr = [];
+    const yearsObj = cohortObj.cohorts
+    for (const year in yearsObj) {
+        let cohortNames = cohortObj.cohorts[year]
+        console.log(cohortNames)
+        cohortNames.forEach(cohort => {
+            arrStr.push(`${cohort} ${year}`);
+        })
+    }
+    // return arrStr;
+}
+console.log(cohortStr(learn));
