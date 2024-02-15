@@ -141,9 +141,4 @@ const arr2 = [7, 8, 2, 1, 5, 4]
 // console.log(oneArray(arr1, arr2));
 
 // 11. Create a function that takes in an array of mixed data types and returns the first value that is a string. HINT: look into the JavaScript .find() method.
-const allTheData = [7, null, "hello", true, 2, "yo!", false, 4, "hello!"]
-// output: "yo!"
-const mixedData = (array) => {
-    return array.find(string => typeof string === 'string')
-}
-console.log(mixedData(allTheData));
+
