@@ -76,6 +76,7 @@ const comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
 
 // 8.Create a function that takes in a string and returns a new string with all the vowels removed.
 const str = "javascript is awesome"
+
 // const removeVowels = (str) => {
 //     let lettersArray = str.split("")
 //     let vowels = "aeiou"
@@ -141,4 +142,5 @@ const arr2 = [7, 8, 2, 1, 5, 4]
 // console.log(oneArray(arr1, arr2));
 
 // 11. Create a function that takes in an array of mixed data types and returns the first value that is a string. HINT: look into the JavaScript .find() method.
+
 
