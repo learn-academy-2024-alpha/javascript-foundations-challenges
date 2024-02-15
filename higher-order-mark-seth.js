@@ -1,5 +1,5 @@
 // 1. Create a function that takes in an array of numbers and returns an array with all numbers multiplied by 10.
-const arr1 = [3, 9, 15, 4, 10]
+//const arr1 = [3, 9, 15, 4, 10]
 // output: [30, 90, 150, 40, 100]
 // const multTen = (array) => {
 //     return array.map((value) => value * 10)
@@ -7,7 +7,7 @@ const arr1 = [3, 9, 15, 4, 10]
 // console.log(multTen(arr1));
 
 // 2. Create a function that takes in an array of numbers and returns an array with all numbers divided by two.
-const arr2 = [3, 9, 15, 4, 10]
+//const arr2 = [3, 9, 15, 4, 10]
 // output: [1.5, 4.5, 7.5, 2, 5]
 
 // const divideTwo = (array) => {
@@ -76,15 +76,71 @@ const comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
 
 // 8.Create a function that takes in a string and returns a new string with all the vowels removed.
 const str = "javascript is awesome"
-const removeVowels = (str) => {
-    let vowels = str.split("")
-    // let notWanted = "aeiou"
-    // console.log(vowels)
-    // console.log(notWanted)
-    return vowels.filter((value)=> value.includes("a",'e','i','o','u') !== true ? value : value)
-    
-    
-}
 
-console.log(removeVowels(str))
+// const removeVowels = (str) => {
+//     let lettersArray = str.split("")
+//     let vowels = "aeiou"
+//     let filteredArray = lettersArray.filter((letter) => !vowels.includes(letter))
+//     return filteredArray.join("")
+// }
+// console.log(removeVowels(str))
 // output: "jvscrpt s wsm"
+
+//9. Create a function that takes in a string containing numbers and returns an array with each number at its own index and converted to the data type of number.
+const stringOfNumbers = "4574328"
+// output: [4, 5, 7, 4, 3, 2, 8]
+// const numberString = (string) => {
+//     let newArray = string.split("")
+//     return newArray.map((value, index) => {
+//         return parseInt(value)
+//     })
+// }
+// console.log(numberString(stringOfNumbers));
+// -------------------------or---------------------
+// const stringConverter = (numString) => {
+//     return numString.split('').map(Number)
+// }
+// console.log(stringConverter(stringOfNumbers));
+
+// 10. Create a function that takes in two arrays as arguments returns one array with no duplicate values.
+const arr1 = [3, 7, 10, 5, 4, 3]
+const arr2 = [7, 8, 2, 1, 5, 4]
+// output: [3, 7, 10, 5, 4, 8, 2, 1]
+
+// const oneArray = (arr1, arr2) => {
+//     let combinedArray = arr1.concat(arr2)
+//     let noDupesArray = []
+//     combinedArray.forEach(num => {
+//         if(!noDupesArray.includes(num)){
+//             noDupesArray.push(num)
+//         }
+//     })
+//     return noDupesArray
+// }
+// console.log(oneArray(arr1, arr2));
+
+
+//--------------------or--------------
+// const oneArray = (arr1, arr2) => {
+//     let combinedArray = arr1.concat(arr2)
+//     let uniqueArray = []
+//     for(let i = 0; i < combinedArray.length; i++) {
+//         if (!uniqueArray.includes(combinedArray[i])) {
+//             uniqueArray.push(combinedArray[i])
+//         }
+//     }
+//     return uniqueArray
+// }  
+// console.log(oneArray(arr1, arr2));  
+
+//-----------------------or----------------
+// const oneArray = (arr1, arr2) => {
+//     let combinedArray = arr1.concat(arr2)
+//     let uniqueArray = combinedArray.filter((value, index) => combinedArray.indexOf(value) === index)
+//     return uniqueArray
+// }
+// console.log(oneArray(arr1, arr2));
+
+// 11. Create a function that takes in an array of mixed data types and returns the first value that is a string. HINT: look into the JavaScript .find() method.
+
+
