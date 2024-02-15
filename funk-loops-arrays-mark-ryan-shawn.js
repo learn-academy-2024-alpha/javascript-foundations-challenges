@@ -78,16 +78,16 @@
 // create an empty arr = 0
 //alert new array 
 
-//     const addThese1 = [1, 2, 3, 4]
-//     const addThese2 = []
-//     const addArr = (array) => {
-//         let newArr = 0
-//         for (let i=0; i<array.length; i++){
-//         newArr += array[i]
-//     }
-//    alert newArr
-// }
-// console.log(addArr(addThese1))
+    const addThese1 = [1, 2, 3, 4]
+    const addThese2 = []
+    const addArr = (array) => {
+        let newArr = 0
+        for (let i=0; i<array.length; i++){
+        newArr += array[i]
+    }
+   alert newArr
+}
+console.log(addArr(addThese1))
 // console.log(addArr(addThese2))
 
 
