@@ -68,7 +68,7 @@ const word2 = "donuts"
 // Expected output: false
 
 // const palindrome = (str) => {
-//     let reverseString = str.split("").reverse().join("")
+//    let reverseString = str.split("").reverse().join("")
 //     return str === reverseString
 // }
 // console.log(palindrome("donuts"));
